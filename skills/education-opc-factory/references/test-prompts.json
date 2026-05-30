@@ -1,0 +1,38 @@
+[
+  {
+    "id": "full-pipeline",
+    "category": "端到端",
+    "prompt": "最近中考改革又有新政策，写一篇分析。我是做武汉中考方向的家长自媒体。",
+    "expected_behavior": "Step1→Step5 完整走通，输出文章+配图+发布清单",
+    "eval_criteria": [
+      "Step1 出了3个选题且与武汉中考相关",
+      "Step2 文章1500-3000字、有引用、有金句、有CTA",
+      "Step3 封面+正文配图",
+      "Step4 三遍审校+修改清单",
+      "Step5 发布清单完整"
+    ]
+  },
+  {
+    "id": "minimal-input",
+    "category": "边界测试",
+    "prompt": "写篇文章",
+    "expected_behavior": "[追问] 追问2个问题收窄（主题？读者？类型？），不出3个方案前不进入Step2",
+    "eval_criteria": [
+      "没有直接跳到写作",
+      "追问了至少1轮",
+      "不出3个方案不进入Step2"
+    ]
+  },
+  {
+    "id": "mixed-input",
+    "category": "端到端",
+    "prompt": "写一篇关于'AI时代英语学习'的文章，要具体一点，我孩子刚上初中。面向家长群体。",
+    "expected_behavior": "Step1→Step5 完整走通",
+    "eval_criteria": [
+      "选题围绕AI+英语+初中生",
+      "文章引用权威/论文来源",
+      "配图风格亲子",
+      "有CTA（加群/关注）"
+    ]
+  }
+]
